@@ -1,0 +1,28 @@
+body {
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+html, body {
+    height: 100%;
+    margin: 0px;
+}
+
+.parent {
+    display: flex;
+    height: 100%;
+}
+
+.child {
+    margin: auto;
+}
+
+h1 {
+    font-family: 'PT Serif', serif;
+    font-size: 5em;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+}
