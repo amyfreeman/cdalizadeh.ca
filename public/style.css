@@ -1,6 +1,6 @@
 body {
-  background-color: #000000;
-  color: #FFFFFF;
+  background-color: #000A0A;
+  color: #FFF5F5;
 }
 
 html, body {
@@ -24,18 +24,25 @@ h1 {
   line-height: 0.5em;
 }
 
-a {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1.5em;
+.skew {
+  transform: skew(-10deg);
+}
+
+.unskew {
+  transform: skew(10deg);
 }
 
 .ghost-button {
   display: inline-block;
-  width: 200px;
-  padding: 8px;
-  color: #FFFFFF;
-  border: 2px solid #FFFFFF;
-  border-radius: 5px;
+  width: 150px;
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  margin-right: 0.25em;
+  margin-left: 0.25em;
+  color: #FFF5F5;
+  border: 2px solid #FFF5F5;
   text-align: center;
   outline: none;
   text-decoration: none;
@@ -44,8 +51,18 @@ a {
 }
 .ghost-button:hover,
 .ghost-button:active {
-  background-color: #FFFFFF;
-  color: #000000;
+  background-color: #FFF5F5;
+  color: #000A0A;
   transition: background-color 0.3s ease-in,
               color 0.3s ease-in;
+}
+
+a {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2.0em;
+}
+
+li {
+  list-style-type: none;
+  display: inline;
 }
