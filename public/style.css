@@ -66,3 +66,7 @@ li {
   list-style-type: none;
   display: inline;
 }
+
+canvas {
+  position:absolute;
+}
