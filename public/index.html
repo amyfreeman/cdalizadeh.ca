@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|PT+Serif" rel="stylesheet">
   </head>
   <body>
-    <canvas id="back" style="position:fixed; top:0;left:0; border:1px solid #FFFFFF;" />
+    <canvas id="back" style="position:fixed; top:0; left:0;"></canvas>
     <div class="main">
       <div class="centre">
         <h1>Cameron Alizadeh</h1>
@@ -21,8 +21,13 @@
       </div>
     </div>
     <script>
-var canvas = document.getElementById("back");
-canvas.addEventListener("click", function(){console.log(3)}, false);
+      window.addEventListener('mousemove', mouseMove);
+
+      function mouseMove(e) {
+        posx = e.pageX;
+        posy = e.pageY;
+        console.log(posx + " " + posy);
+      }
     </script>
   </body>
 </html>
