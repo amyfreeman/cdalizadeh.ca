@@ -7,8 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|PT+Serif" rel="stylesheet">
   </head>
   <body>
-    <canvas id="back" style="position:fixed; top:0;left:0; z-index: -1;">
-    </canvas>
+    <canvas id="back" style="position:fixed; top:0;left:0; border:1px solid #FFFFFF;" />
     <div class="main">
       <div class="centre">
         <h1>Cameron Alizadeh</h1>
@@ -22,15 +21,8 @@
       </div>
     </div>
     <script>
-      var canvas = document.getElementById('back');
-      var context = canvas.getContext('2d');
-      function update() {
-        context.beginPath();
-        context.arc(100, 100, 50, 0, 2 * Math.PI, true);
-        context.fillStyle = "#FF6A6A";
-        context.fill();
-      }
-      update();
+var canvas = document.getElementById("back");
+canvas.addEventListener("click", function(){console.log(3)}, false);
     </script>
   </body>
 </html>
