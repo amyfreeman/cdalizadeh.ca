@@ -9,7 +9,7 @@
   <body>
     <canvas id="back" style="position:fixed; top:0; left:0;"></canvas>
     <div class="main">
-      <div class="centre">
+      <div class="centre" style="z-index:1">
         <h1>Cameron Alizadeh</h1>
         <nav>
           <ul>
@@ -21,13 +21,50 @@
       </div>
     </div>
     <script>
-      window.addEventListener('mousemove', mouseMove);
+      var canvasPos = getPosition(canvas);
+      var mouseX = 0;
+      var mouseY = 0;
 
+      window.addEventListener('mousemove', setMousePosition, false);
       function mouseMove(e) {
         posx = e.pageX;
         posy = e.pageY;
         console.log(posx + " " + posy);
       }
+
+      var canvas = document.querySelector("#back");
+      var ctx = canvas.getContext("2d");
+      ctx.canvas.width  = window.innerWidth;
+      ctx.canvas.height = window.innerHeight;
+
+      function setMousePosition(e) {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+      }  
+      function update() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.beginPath();
+        ctx.arc(mouseX, mouseY, 50, 0, 2 * Math.PI, true);
+        ctx.fillStyle = "#FF6A6A";
+        ctx.fill();
+
+        requestAnimationFrame(update);
+      }
+      function getPosition(el) {
+        var xPosition = 0;
+        var yPosition = 0;
+      
+        while (el) {
+          xPosition += (el.offsetLeft - el.scrollLeft + el.clientLeft);
+          yPosition += (el.offsetTop - el.scrollTop + el.clientTop);
+          el = el.offsetParent;
+        }
+        return {
+          x: xPosition,
+          y: yPosition
+        };
+      }     
+      update();
     </script>
   </body>
 </html>
