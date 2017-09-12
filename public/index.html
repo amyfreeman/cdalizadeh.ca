@@ -21,50 +21,53 @@
       </div>
     </div>
     <script>
-      var canvasPos = getPosition(canvas);
-      var mouseX = 0;
-      var mouseY = 0;
+      //constants
+      var height = window.innerHeight;
+      var width = window.innerWidth;
 
-      window.addEventListener('mousemove', setMousePosition, false);
-      function mouseMove(e) {
-        posx = e.pageX;
-        posy = e.pageY;
-        console.log(posx + " " + posy);
+      //classes
+      function Worm (size) {
+        this.size = size;
+        this.x = Math.floor(Math.random() * width);
+        this.y = Math.floor(Math.random() * height);
       }
-
-      var canvas = document.querySelector("#back");
-      var ctx = canvas.getContext("2d");
-      ctx.canvas.width  = window.innerWidth;
-      ctx.canvas.height = window.innerHeight;
-
-      function setMousePosition(e) {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
-      }  
-      function update() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        ctx.beginPath();
-        ctx.arc(mouseX, mouseY, 50, 0, 2 * Math.PI, true);
-        ctx.fillStyle = "#FF6A6A";
-        ctx.fill();
-
-        requestAnimationFrame(update);
-      }
-      function getPosition(el) {
-        var xPosition = 0;
-        var yPosition = 0;
-      
-        while (el) {
-          xPosition += (el.offsetLeft - el.scrollLeft + el.clientLeft);
-          yPosition += (el.offsetTop - el.scrollTop + el.clientTop);
-          el = el.offsetParent;
+      Worm.prototype.move = function() {
+        var flag = Math.floor(Math.random() * 4);
+        if (flag == 0){
+          this.x = this.x + this.size;
         }
-        return {
-          x: xPosition,
-          y: yPosition
-        };
-      }     
-      update();
+        else if (flag == 1){
+          this.y = this.y + this.size;
+        }
+        else if (flag == 2){
+          this.x = this.x - this.size;
+        }
+        else{
+          this.y = this.y - this.size;
+        }
+      }
+      Worm.prototype.draw = function() {
+        ctx.fillStyle = 'green';
+        ctx.fillRect(this.x, this.y, this.size, this.size);
+      }
+
+      //main
+      var canvas;
+      var ctx;
+
+      initCanvas();
+      var worm = new Worm(5);
+      while (true){
+        worm.draw();
+        worm.move();
+      }
+
+      function initCanvas() {
+        canvas = document.querySelector("#back");
+        ctx = canvas.getContext("2d");
+        ctx.canvas.width  = width;
+        ctx.canvas.height = height;
+      }
     </script>
   </body>
 </html>
