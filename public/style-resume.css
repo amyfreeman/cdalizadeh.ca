@@ -1,0 +1,32 @@
+body {
+  background-color: #000A0A;
+  color: #CFC5C5;
+  font-family: 'Open Sans', sans-serif;
+  margin:40px auto;
+  max-width:860px;
+  padding:10px 10px;
+  font-size: 1em;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Merriweather', serif;
+}
+
+h1 {
+  font-size: 3em;
+  text-align: center;
+  line-height: 0.7em;
+}
+
+.adjust {
+  float: right;
+}
+
+.subtitle {
+  text-align: center; 
+}
+
+.item {
+  padding-bottom: 10px;
+  padding-left: 40px;
+}

@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8">
     <title>Cameron Alizadeh</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans|PT+Serif" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style-index.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab" rel="stylesheet">
   </head>
   <body>
     <canvas id="back" style="position:fixed; top:0; left:0;"></canvas>
     <div class="main">
-      <div class="centre" style="z-index:1">
+      <div class="centre">
         <h1>Cameron Alizadeh</h1>
         <nav>
           <ul>
@@ -56,11 +56,22 @@
       var ctx;
 
       initCanvas();
-      var worm = new Worm(5);
-      while (true){
-        worm.draw();
-        worm.move();
-      }
+      var worm = new Worm(20);
+      worm.draw();
+      worm.move();
+      worm.draw();
+      worm.move();
+      worm.draw();
+      worm.move();
+      worm.draw();
+      worm.move();
+      worm.draw();
+      worm.move();
+      worm.draw();
+      worm.move();
+      worm.draw();
+      
+
 
       function initCanvas() {
         canvas = document.querySelector("#back");
