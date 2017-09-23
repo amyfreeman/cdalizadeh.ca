@@ -30,6 +30,14 @@
         this.size = size;
         this.x = Math.floor(Math.random() * width);
         this.y = Math.floor(Math.random() * height);
+        this.color;
+        var rand = Math.random();
+        if (rand < 1/2){
+          this.color = '#200020';
+        }
+        else {
+          this.color = '#002000';
+        }
       }
       Worm.prototype.move = function() {
         var flag = Math.floor(Math.random() * 4);
@@ -47,7 +55,7 @@
         }
       }
       Worm.prototype.draw = function() {
-        ctx.fillStyle = 'green';
+        ctx.fillStyle = this.color;
         ctx.fillRect(this.x, this.y, this.size, this.size);
       }
 
@@ -56,21 +64,18 @@
       var ctx;
 
       initCanvas();
-      var worm = new Worm(20);
-      worm.draw();
-      worm.move();
-      worm.draw();
-      worm.move();
-      worm.draw();
-      worm.move();
-      worm.draw();
-      worm.move();
-      worm.draw();
-      worm.move();
-      worm.draw();
-      worm.move();
-      worm.draw();
-      
+      var worms = [];
+      for (var i = 0; i < 50; i++){
+        worms.push(new Worm(i));
+      }
+      for (var i = 0 ; i < 800; i++){
+        setTimeout(function(){
+          for (var j = 0; j < worms.length; j++){
+            worms[j].draw();
+            worms[j].move();
+          }
+        }, i * 200);
+      }
 
 
       function initCanvas() {

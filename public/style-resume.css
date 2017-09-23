@@ -18,8 +18,19 @@ h1 {
   line-height: 0.7em;
 }
 
+h2 {
+  line-height: 1.3em;
+}
+
+h3 {
+  line-height: 0.6em;
+}
+
 .adjust {
   float: right;
+  font-size: 1em;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: normal;
 }
 
 .subtitle {
@@ -29,4 +40,8 @@ h1 {
 .item {
   padding-bottom: 10px;
   padding-left: 40px;
+}
+
+.section {
+  padding: 10px 0px;
 }
