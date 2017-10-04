@@ -8,6 +8,18 @@ body {
   font-size: 1em;
 }
 
+canvas {
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:-1;
+}
+
+.main {
+  background-color: #000A0A;
+  padding: 10px;
+}
+
 h1, h2, h3, h4, h5 {
   font-family: 'Merriweather', serif;
 }
@@ -15,8 +27,9 @@ h1, h2, h3, h4, h5 {
 h1 {
   font-size: 3em;
   text-align: center;
-  line-height: 0.7em;
   font-weight: normal;
+  margin-bottom: 18px;
+  margin-top: 18px;
 }
 
 h2 {
