@@ -3,9 +3,21 @@ body {
   color: #CFC5C5;
   font-family: 'Open Sans', sans-serif;
   margin:40px auto;
-  max-width:860px;
+  max-width:1000px;
   padding:10px 10px;
   font-size: 1em;
+}
+
+canvas {
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:-1;
+}
+
+.main {
+  background-color: #000A0A;
+  padding: 50px 70px;
 }
 
 h1, h2, h3, h4, h5 {
@@ -15,7 +27,9 @@ h1, h2, h3, h4, h5 {
 h1 {
   font-size: 3em;
   text-align: center;
-  line-height: 0.7em;
+  font-weight: normal;
+  margin-bottom: 18px;
+  margin-top: 18px;
 }
 
 h2 {
@@ -44,4 +58,14 @@ h3 {
 
 .section {
   padding: 10px 0px;
+}
+
+@media (min-width: 800px) {
+  .skew {
+    transform: skew(-1deg);
+  }
+
+  .unskew {
+    transform: skew(1deg);
+  }
 }
