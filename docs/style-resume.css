@@ -60,7 +60,7 @@ h3 {
   padding: 10px 0px;
 }
 
-@media (min-width: 800px) {
+@media screen and (min-width: 800px) {
   .skew {
     transform: skew(-1deg);
   }
