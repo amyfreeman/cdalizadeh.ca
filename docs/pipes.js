@@ -1,14 +1,14 @@
 //constants
 var height = window.innerHeight;
 var width = window.innerWidth;
-var green = '#004000';
-var pink = '#400040';
+var col1 = '#202020';
+var col2 = '#0D0D0D';
 var step = 5;
 var size = 10;
-var delay = 50;
+var growthDelay = 50;
+var spawnDelay = 300;
 var changeRatio = 30;
 var numPipes = 100;
-var numIterations = 5000;
 
 //classes
 function Pipe () {
@@ -17,10 +17,10 @@ function Pipe () {
     this.color;
     var rand = Math.random();
     if (rand < 1/2){
-        this.color = pink;
+        this.color = col2;
     }
     else {
-        this.color = green;
+        this.color = col1;
     }
     this.dir = Math.floor(Math.random() * 4);
     this.step = step;
@@ -76,13 +76,12 @@ var ctx;
 initCanvas();
 var pipes = [];
 for (var i = 0; i < numPipes; i++){
-    pipes.push(new Pipe(i));
-}
-for (var i = 0 ; i < numIterations; i++){
-    setTimeout(timeStep, i * delay);
+    setTimeout(function(){pipes.push(new Pipe())}, i * spawnDelay);
 }
 
-function timeStep() {
+setInterval(growthStep, growthDelay);
+
+function growthStep() {
     for (var j = 0; j < pipes.length; j++){
         pipes[j].draw();
         pipes[j].adjust();

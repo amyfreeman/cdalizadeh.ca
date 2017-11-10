@@ -1,5 +1,5 @@
 {
-  "name": "boisterous-cobra-99",
+  "name": "cdalizadeh.ca",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -12,5 +12,8 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.15.4"
+  },
+  "repository": {
+    "type": "git"
   }
 }
