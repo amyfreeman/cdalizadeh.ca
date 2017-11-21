@@ -3,9 +3,9 @@ var height = window.innerHeight;
 var width = window.innerWidth;
 var col1 = '#202020';
 var col2 = '#0D0D0D';
-var step = 5;
-var size = 10;
-var growthDelay = 50;
+var step = 2;
+var size = 5;
+var growthDelay = 25;
 var spawnDelay = 300;
 var changeRatio = 30;
 var numPipes = 100;
@@ -52,7 +52,7 @@ Pipe.prototype.changeDir = function() {
 }
 
 Pipe.prototype.adjust = function() {
-    if (Math.random() < this.dirTime / 200) {
+    if (Math.random() < this.dirTime / 500) {
         this.dirTime = 0;
         this.changeDir();
     }
