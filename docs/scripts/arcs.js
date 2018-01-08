@@ -51,16 +51,8 @@ function arcSpace() {
                 form.stroke(false).fill(colors[i % 3]).point(arc.start.$add(center));
                 form.stroke(false).fill(colors[i % 3]).point(arc.end.$add(center));
             }
-        },
-
-        onMouseAction: function(type, x, y, evt) {
-            if (type=="move") {
-                mouse.set(x,y);
-            }
         }
     });
-
-    space.bindMouse();
     space.play();
 }
 
@@ -70,6 +62,10 @@ $(window).resize(function(){
     space.removeAll();
     arcSpace();
 });
+
+$("body").mousemove(function(e) {
+    mouse.set(e.pageX, e.pageY);
+})
 
 //functions
 function getRandomRadius(){
