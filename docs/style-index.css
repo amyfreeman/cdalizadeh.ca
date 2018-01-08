@@ -1,5 +1,5 @@
 body {
-  background-color: #252935;
+  background-color: #252539;
   color: #FFFFFF;
   font-family: 'Open Sans', sans-serif;
   height: 100%;
@@ -23,7 +23,7 @@ html {
 
 h1 {
   font-family: 'Roboto Slab', serif;
-  font-size: 5em;
+  font-size: 4em;
   font-weight: normal;
   margin-bottom: 20px;
   margin-top: 20px;
@@ -38,7 +38,7 @@ h1 {
 }
 
 .ghost-button {
-  font-size: 2.0em;
+  font-size: 1.5em;
   display: inline-block;
   width: 150px;
   padding-left: 0.75em;
