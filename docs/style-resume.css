@@ -1,10 +1,7 @@
 body {
-  background-color: #252935;
-  color: #CFC5C5;
+  color: #FFFFFF;
   font-family: 'Open Sans', sans-serif;
   margin:40px auto;
-  max-width:1000px;
-  padding:10px 10px;
   font-size: 1em;
 }
 
@@ -16,8 +13,11 @@ canvas {
 }
 
 .main {
-  background-color: #252935;
+  background-color: #28283C;
+  max-width: 1000px;
   padding: 50px 70px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 h1, h2, h3, h4, h5 {
@@ -42,8 +42,6 @@ h3 {
 
 .adjust {
   float: right;
-  font-size: 1em;
-  font-family: 'Open Sans', sans-serif;
   font-weight: normal;
 }
 
@@ -60,12 +58,6 @@ h3 {
   padding: 10px 0px;
 }
 
-@media screen and (min-width: 800px) {
-  .skew {
-    transform: skew(-1deg);
-  }
-
-  .unskew {
-    transform: skew(1deg);
-  }
+ul{
+  list-style-type: none;
 }
