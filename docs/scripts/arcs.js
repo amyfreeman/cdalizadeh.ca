@@ -1,8 +1,8 @@
 //constants
 var height = window.innerHeight;
 var width = window.innerWidth;
-var c_x = Math.floor(0.9 * width);
-var c_y = Math.floor(0.9 * height);
+var c_x = Math.floor(p_x * width);
+var c_y = Math.floor(p_y * height);
 var bgColor = '#252539';
 var lineColor = [100, 100, 100];
 var lineWidth = 1;

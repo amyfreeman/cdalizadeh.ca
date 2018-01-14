@@ -43,6 +43,8 @@ h3 {
 .adjust {
   float: right;
   font-weight: normal;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
 }
 
 .subtitle {
@@ -60,4 +62,42 @@ h3 {
 
 ul{
   list-style-type: none;
+}
+
+.ghost-button {
+  font-size: 1.5em;
+  display: inline-block;
+  width: 150px;
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+  margin-right: 0.25em;
+  margin-left: 0.25em;
+  color: #FFFFFF;
+  border: 2px solid #FFFFFF;
+  text-align: center;
+  outline: none;
+  text-decoration: none;
+  transition: background-color 0.2s ease-out,
+              color 0.2s ease-out;
+}
+.ghost-button:hover,
+.ghost-button:active {
+  background-color: #FFFFFF;
+  color: #000000;
+  transition: background-color 0.3s ease-in,
+              color 0.3s ease-in;
+}
+
+.skew {
+  transform: skew(-10deg);
+}
+
+.unskew {
+  transform: skew(10deg);
+}
+
+a {
+  color: inherit;
 }
