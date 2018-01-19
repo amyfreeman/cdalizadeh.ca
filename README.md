@@ -1,2 +1,3 @@
 # cdalizadeh.ca
-My own personal portfolio and resume page
+<img src="./media/screenshot.png" width="100%" />
+Welcome to my personal portfolio/resume page!
