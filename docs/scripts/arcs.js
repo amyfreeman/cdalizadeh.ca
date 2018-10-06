@@ -4,7 +4,7 @@ var width = window.innerWidth;
 var c_x = Math.floor(p_x * width);
 var c_y = Math.floor(p_y * height);
 var bgColor = '#252539';
-var lineColor = [100, 100, 100];
+var lineColor = [125, 125, 125];
 var lineWidth = 1;
 var minRadius = 10;
 var maxRadius = Math.floor(0.9 * Math.max(height, width));
@@ -64,7 +64,7 @@ $(window).resize(function(){
 });
 
 $("body").mousemove(function(e) {
-    mouse.set(e.pageX, e.pageY);
+    mouse.set(e.clientX, e.clientY);
 })
 
 //functions
@@ -84,11 +84,11 @@ function getColorFromDistance(distance){
     if (distance > 200){
         brightness = 0.5;
     }
-    else if (distance < 30){
+    else if (distance < 10){
         brightness = 1;
     }
     else{
-        brightness = 1 - 0.5/170 * (distance - 30);
+        brightness = 1 - 0.6/190 * (distance - 10);
     }
     return 'rgba(' + lineColor[0] + ', ' + lineColor[1] + ', ' + lineColor[2] + ', ' + brightness + ')';
 }
