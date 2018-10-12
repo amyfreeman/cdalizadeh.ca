@@ -4,7 +4,7 @@ var width = window.innerWidth;
 var c_x = Math.floor(p_x * width);
 var c_y = Math.floor(p_y * height);
 var bgColor = '#252539';
-var lineColor = [125, 125, 125];
+var lineColor = [120, 128, 153];
 var lineWidth = 1;
 var minRadius = 10;
 var maxRadius = Math.floor(0.9 * Math.max(height, width));
@@ -12,7 +12,7 @@ var minDtheta = Math.PI / 2;
 var maxDtheta = 0.9 * 2 * Math.PI;
 var numArcs = 50;
 var omega = 0.0001; //rads per millisecond
-var colors = ["#FF3F8E", "#04C2C9", "#2E55C1"];
+var colors = ["#FA6CEF", "#C02E4F", "#71CCE8"];
 
 //classes
 function Arc(center){

@@ -1,6 +1,6 @@
 body {
   background-color: #252539;
-  color: #FFFFFF;
+  color: #F2F1F3;
   font-family: 'Open Sans', sans-serif;
   height: 100%;
   margin: 0px;
@@ -51,8 +51,8 @@ h1 {
   padding-bottom: 0.25em;
   margin-right: 0.25em;
   margin-left: 0.25em;
-  color: #FFFFFF;
-  border: 2px solid #FFFFFF;
+  color: #F2F1F3;
+  border: 2px solid #F2F1F3;
   text-align: center;
   outline: none;
   text-decoration: none;
@@ -61,8 +61,9 @@ h1 {
 }
 .ghost-button:hover,
 .ghost-button:active {
-  background-color: #FFFFFF;
-  color: #000000;
+  background-color: #71A6E8;
+  border: 2px solid #71A6E8;
+  color: #F2F1F3;
   transition: background-color 0.3s ease-in,
               color 0.3s ease-in;
 }
